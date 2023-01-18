@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  job_1:
+    name: Job_1
+    uses: nesrinTufan/test-repo/.github/workflows/ci-test.yml@v3
+    with:
+      working-directory: .
+    secrets:
+      EE_CHECKOUT_TOKEN: ${{ secrets.EE_CHECKOUT_TOKEN }}
