@@ -10,7 +10,7 @@ on:
 
 jobs:
   ci_test:
-    uses: nesrinTufan/test-repo/.github/workflows/ci-test.yml@main
+    uses: nesrinTufan/test-repo/.github/workflows/ci-test.yml@testing-new-branch
     secrets: 
       git-token: ${{ secrets.GITHUB_TOKEN }}
     #with:
