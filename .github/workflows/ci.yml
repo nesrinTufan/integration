@@ -10,9 +10,10 @@ on:
 
 jobs:
   ci_test:
-    name: Job_1
     uses: nesrinTufan/test-repo/.github/workflows/ci-test.yml@v3
-    with:
-      working-directory: .
+    secrets: 
+      git-token: ${{ secrets.GITHUB_TOKEN }}
+    #with:
+      #working-directory: .
     # secrets:
       # EE_CHECKOUT_TOKEN: ${{ secrets.EE_CHECKOUT_TOKEN }}
